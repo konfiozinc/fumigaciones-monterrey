@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es" class="h-full bg-slate-950 select-none">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="theme-color" content="#b91c1c"/>
+    <title>Fumigaciones Monterrey INC. - Tarjeta Digital</title>
+    
+    <!-- Tailwind CSS & Iconografía Premium -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+        .fade-in-up { opacity: 0; animation: fadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        
+        /* Efecto de Brillo Corporativo (Wow Effect) */
+        @keyframes borderGlow {
+            0%, 100% { border-color: rgba(185, 28, 28, 0.4); box-shadow: 0 0 12px rgba(185, 28, 28, 0.3); }
+            50% { border-color: rgba(220, 38, 38, 0.8); box-shadow: 0 0 20px rgba(220, 38, 38, 0.6); }
+        }
+        .wow-profile { animation: borderGlow 4s infinite ease-in-out; }
+        
+        /* Efecto de pulso para el botón oficial de WhatsApp */
+        @keyframes whatsappPulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 8px 20px -4px rgba(37, 211, 102, 0.4); }
+            50% { transform: scale(1.02); box-shadow: 0 14px 25px -4px rgba(37, 211, 102, 0.6); }
+        }
+        .pulse-whatsapp { animation: whatsappPulse 2s infinite ease-in-out; }
+        
+        .modal-overlay { position: fixed; inset: 0; background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(8px); z-index: 50; display: flex; align-items: center; justify-content: center; padding: 20px; opacity: 0; visibility: hidden; transition: opacity 0.2s ease, visibility 0.2s ease; }
+        .modal-overlay.active { opacity: 1; visibility: visible; }
+        .modal-content { background: #ffffff; border-radius: 28px; width: 100%; max-w: 326px; transform: scale(0.96); transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1); border: 1px solid rgba(255,255,255,0.1); }
+        .modal-overlay.active .modal-content { transform: scale(1); }
+        .app-container { height: 100vh; height: 100dvh; }
+    </style>
+</head>
+<body class="bg-slate-950 w-full flex justify-center items-center overflow-hidden">
+
+    <!-- 1. SPLASH SCREEN -->
+    <div id="splash" class="flex flex-col items-center justify-center">
+        <div class="text-center animate-pulse">
+            <div class="w-20 h-20 mx-auto bg-gradient-to-tr from-red-600 to-red-500 rounded-full flex items-center justify-center shadow-2xl border-4 border-white mb-3">
+                <i class="fas fa-spray-can text-3xl text-white"></i>
+            </div>
+            <h1 class="text-2xl font-black text-white tracking-wider">MONTERREY INC.</h1>
+            <p class="text-slate-300 text-[10px] font-bold uppercase tracking-widest mt-1">Soluciones & Servicios</p>
+        </div>
+    </div>
+
+    <!-- APP CONTAINER FIJO (ALTO DE PANTALLA CONTENIDO - SIN SCROLL WEB) -->
+    <div class="app-container w-full max-w-[380px] bg-slate-900 relative flex flex-col justify-between overflow-hidden shadow-2xl">
+        
+        <!-- CUERPO DE LA APP -->
+        <div class="flex-grow flex flex-col justify-between pb-24 overflow-y-auto">
+            
+            <!-- 2. PORTADA & HERO (Ubicación de Seguridad Central) -->
+            <header class="relative bg-gradient-to-b from-red-750 via-red-900 to-slate-900 pt-6 pb-6 px-5 text-center text-white rounded-b-[40px] shadow-2xl flex-shrink-0 border-b border-red-600/20">
+                <div class="absolute top-3 right-4 bg-emerald-600 text-white font-black px-2.5 py-0.5 rounded-full text-[8px] uppercase tracking-wider shadow-md">
+                    Abierto 24h
+                </div>
+                
+                <!-- Título Superior -->
+                <h2 class="text-2xl font-black text-white mt-2 tracking-tight bg-gradient-to-r from-white via-slate-100 to-slate-300 bg-clip-text text-transparent fade-in-up" style="animation-delay: 300ms;">Fumigación Monterrey</h2>
+                <p class="text-red-400 font-bold text-[10px] uppercase tracking-widest mt-0.5 fade-in-up" style="animation-delay: 400ms;">Fumigaciones Monterrey INC.</p>
+                
+                <!-- Logotipo Restaurado Ubicado en el Centro Real de la Cabecera -->
+                <div class="w-20 h-20 mx-auto bg-white rounded-full flex flex-col items-center justify-center border-4 wow-profile p-1 fade-in-up my-3 shadow-lg shadow-red-600/10" style="animation-delay: 500ms;">
+                    <i class="fas fa-mask-ventilator text-3xl text-red-600"></i>
+                    <span class="font-black text-[7px] text-slate-900 tracking-tighter mt-0.5">MONTERREY INC.</span>
+                </div>
+                
+                <!-- Bloque de Información de Identificación -->
+                <div class="bg-slate-950/70 rounded-xl p-2 border border-red-500/20 backdrop-blur-md max-w-[200px] mx-auto shadow-inner fade-in-up" style="animation-delay: 600ms;">
+                    <p class="text-[8px] uppercase text-slate-400 tracking-widest font-bold">Identificación Oficial</p>
+                    <p class="text-xs font-bold text-white mt-0.5">NIT 700225285-8</p>
+                </div>
+            </header>
+
+            <!-- CONTENIDO CENTRAL DE CONVERSIÓN -->
+            <div class="px-5 space-y-3 flex-grow flex flex-col justify-center mt-2">
+                
+                <!-- 3. BOTÓN PRINCIPAL ACTUALIZADO CON COLOR OFICIAL DE WHATSAPP (#25D366) -->
+                <div class="fade-in-up" style="animation-delay: 700ms;">
+                    <a href="https://wa.me/573147936494?text=Hola%20Fumigaciones%20Monterrey,%20solicito información%20sobre%20un%20servicio%20de%20fumigación" target="_blank" class="w-full flex items-center justify-center bg-[#25D366] text-white font-black py-3.5 px-4 rounded-xl text-center text-xs uppercase tracking-wider transition-transform transform active:scale-95 shadow-lg shadow-green-500/20 pulse-whatsapp">
+                        <i class="fab fa-whatsapp text-xl mr-2 text-white"></i>¡SOLICITAR SERVICIO YA!
+                    </a>
+                </div>
+
+                <!-- SECTORES COMERCIALES EN CRISTAL (Glassmorphism) -->
+                <div class="grid grid-cols-2 gap-2 fade-in-up" style="animation-delay: 800ms;">
+                    <div class="bg-slate-800/40 border border-slate-700/30 p-2.5 rounded-xl flex items-center gap-2 shadow-md">
+                        <div class="w-6 h-6 bg-red-500/10 rounded-lg flex items-center justify-center text-red-400 text-xs flex-shrink-0 shadow-inner"><i class="fas fa-industry"></i></div>
+                        <span class="text-[10px] font-bold text-slate-300 leading-tight">Industria Alimentaria</span>
+                    </div>
+                    <div class="bg-slate-800/40 border border-slate-700/30 p-2.5 rounded-xl flex items-center gap-2 shadow-md">
+                        <div class="w-6 h-6 bg-red-500/10 rounded-lg flex items-center justify-center text-red-400 text-xs flex-shrink-0 shadow-inner"><i class="fas fa-hotel"></i></div>
+                        <span class="text-[10px] font-bold text-slate-300 leading-tight">Hoteles & Clínicas</span>
+                    </div>
+                    <div class="bg-slate-800/40 border border-slate-700/30 p-2.5 rounded-xl flex items-center gap-2 shadow-md">
+                        <div class="w-6 h-6 bg-red-500/10 rounded-lg flex items-center justify-center text-red-400 text-xs flex-shrink-0 shadow-inner"><i class="fas fa-school"></i></div>
+                        <span class="text-[10px] font-bold text-slate-300 leading-tight">Colegios & Edificios</span>
+                    </div>
+                    <div class="bg-slate-800/40 border border-slate-700/30 p-2.5 rounded-xl flex items-center gap-2 shadow-md">
+                        <div class="w-6 h-6 bg-red-500/10 rounded-lg flex items-center justify-center text-red-400 text-xs flex-shrink-0 shadow-inner"><i class="fas fa-faucet-drip"></i></div>
+                        <span class="text-[10px] font-bold text-slate-300 leading-tight">Purificadoras Agua</span>
+                    </div>
+                </div>
+
+                <!-- ENLACE TELEFÓNICO DIRECTO NATIVO -->
+                <div class="fade-in-up" style="animation-delay: 900ms;">
+                    <a href="tel:+573147936494" class="w-full bg-slate-800/80 border border-slate-700/60 py-3 px-3 rounded-xl flex items-center justify-center gap-2 text-xs font-bold text-slate-300 transition-colors hover:bg-slate-700">
+                        <i class="fas fa-phone text-red-500 animate-pulse"></i> Llamar Línea Directa: 314 7936494
+                    </a>
+                </div>
+            </div>
+            
+            <!-- ACCIÓN DE GUARDADO VCARD -->
+            <div class="px-5 mt-auto pt-2 fade-in-up" style="animation-delay: 1000ms;">
+                <button id="btn-vcard" class="w-full bg-red-700 hover:bg-red-600 text-white font-bold py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 text-xs uppercase tracking-wider border border-red-600 shadow-md">
+                    <i class="fas fa-user-plus text-white"></i> GUARDAR CONTACTO EN AGENDA
+                </button>
+            </div>
+        </div>
+
+        <!-- 12. BARRA DE NAVEGACIÓN INFERIOR (ESTILO APP FIJA - CONTROL MODAL) -->
+        <nav class="absolute bottom-0 inset-x-0 bg-slate-950 border-t border-slate-800 px-2 py-2.5 flex justify-around items-center z-20 shadow-2xl">
+            <button id="nav-services" class="flex flex-col items-center justify-center text-slate-400 hover:text-red-500 w-12 transition-colors">
+                <i class="fas fa-shield-virus text-base"></i>
+                <span class="text-[9px] font-semibold mt-1">Servicios</span>
+            </button>
+            <button id="nav-gallery" class="flex flex-col items-center justify-center text-slate-400 hover:text-red-500 w-12 transition-colors">
+                <i class="fas fa-clipboard-check text-base"></i>
+                <span class="text-[9px] font-semibold mt-1">Sectores</span>
+            </button>
+            <button id="nav-testimonials" class="flex flex-col items-center justify-center text-slate-400 hover:text-red-500 w-12 transition-colors">
+                <i class="fas fa-square-poll-horizontal text-base"></i>
+                <span class="text-[9px] font-semibold mt-1">Garantía</span>
+            </button>
+            <button id="nav-coverage" class="flex flex-col items-center justify-center text-slate-400 hover:text-red-500 w-12 transition-colors">
+                <i class="fas fa-map-location-dot text-base"></i>
+                <span class="text-[9px] font-semibold mt-1">Ubicación</span>
+            </button>
+            <button id="nav-qr" class="flex flex-col items-center justify-center text-slate-400 hover:text-red-500 w-12 transition-colors">
+                <i class="fas fa-qrcode text-base"></i>
+                <span class="text-[9px] font-semibold mt-1">QR</span>
+            </button>
+        </nav>
+    </div>
+
+    <!-- ================= MODALES INTERACTIVOS (ARQUITECTURA FIJA) ================= -->
+
+    <!-- MODAL DE SERVICIOS -->
+    <div id="modal-services" class="modal-overlay">
+        <div class="modal-content overflow-hidden">
+            <div class="bg-red-700 text-white p-4 font-bold text-xs uppercase tracking-wider flex justify-between items-center">
+                <span><i class="fas fa-shield-virus mr-2"></i>Fumigación Profesional</span>
+                <button class="close-modal text-lg font-bold px-2 text-white/80 hover:text-white">&times;</button>
+            </div>
+            <div class="p-4 max-h-[60vh] overflow-y-auto space-y-3 text-slate-800">
+                <div class="p-3 bg-slate-50 rounded-xl border border-slate-100">
+                    <h4 class="font-bold text-red-900 text-xs uppercase">Fumigación General Integrada</h4>
+                    <p class="text-[11px] text-slate-600 mt-1 leading-normal">Control avanzado y eliminación efectiva de todo tipo de plagas e insectos. Soluciones con altos estándares de seguridad y CIP autorizados.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL DE SECTORES / EVIDENCIA -->
+    <div id="modal-gallery" class="modal-overlay">
+        <div class="modal-content overflow-hidden">
+            <div class="bg-red-700 text-white p-4 font-bold text-xs uppercase tracking-wider flex justify-between items-center">
+                <span><i class="fas fa-clipboard-check mr-2"></i>Sectores de Cobertura</span>
+                <button class="close-modal text-lg font-bold px-2 text-white/80 hover:text-white">&times;</button>
+            </div>
+            <div class="p-4 max-h-[60vh] overflow-y-auto text-slate-800 text-xs space-y-2">
+                <p class="font-medium text-slate-500 text-[10px] uppercase tracking-wider">Atención Especializada en:</p>
+                <ul class="space-y-1.5 font-semibold text-slate-700 pl-1">
+                    <li><i class="fas fa-check text-red-600 mr-2"></i>Industrias Alimentarias</li>
+                    <li><i class="fas fa-check text-red-600 mr-2"></i>Hoteles, Colegios y Hospitales</li>
+                    <li><i class="fas fa-check text-red-600 mr-2"></i>Zonas Residenciales e Iglesias</li>
+                    <li><i class="fas fa-check text-red-600 mr-2"></i>Edificios, Apartamentos y Plantas de Agua</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL DE TESTIMONIOS / GARANTÍA -->
+    <div id="modal-testimonials" class="modal-overlay">
+        <div class="modal-content overflow-hidden">
+            <div class="bg-red-700 text-white p-4 font-bold text-xs uppercase tracking-wider flex justify-between items-center">
+                <span><i class="fas fa-square-poll-horizontal mr-2"></i>Soluciones CIP</span>
+                <button class="close-modal text-lg font-bold px-2 text-white/80 hover:text-white">&times;</button>
+            </div>
+            <div class="p-4 space-y-3 text-slate-800">
+                <div class="bg-red-50/50 p-3 rounded-xl border border-red-100">
+                    <h4 class="font-bold text-red-900 text-xs uppercase">Compromiso Sanitario</h4>
+                    <p class="text-[11px] text-slate-700 italic leading-relaxed mt-1">Cumplimos estrictamente con protocolos técnicos avalados para entornos comerciales e institucionales de alta exigencia.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL DE UBICACIÓN -->
+    <div id="modal-coverage" class="modal-overlay">
+        <div class="modal-content overflow-hidden">
+            <div class="bg-red-700 text-white p-4 font-bold text-xs uppercase tracking-wider flex justify-between items-center">
+                <span><i class="fas fa-map-location-dot mr-2"></i>Ubicación de la Empresa</span>
+                <button class="close-modal text-lg font-bold px-2 text-white/80 hover:text-white">&times;</button>
+            </div>
+            <div class="p-4 space-y-3 text-slate-800 text-[11px]">
+                <div class="p-3 bg-slate-50 rounded-xl border flex items-start gap-2.5">
+                    <i class="fas fa-map-pin text-red-700 text-sm mt-0.5"></i>
+                    <div>
+                        <h5 class="font-bold text-slate-800">Sede Principal Centro</h5>
+                        <p class="text-[10px] text-slate-600 mt-0.5 font-semibold">Calle 5 N- 5 -40 Barrio Centro, Riohacha.</p>
+                    </div>
+                </div>
+                <div class="p-3 bg-slate-50 rounded-xl border space-y-1.5 font-medium">
+                    <div class="flex justify-between border-b pb-1"><span>Disponibilidad:</span><span class="font-bold text-emerald-600">Abierto 24 Horas</span></div>
+                    <div class="flex justify-between"><span>Servicio:</span><span class="text-slate-900 font-bold">Urgencias e Inspecciones</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL DE CÓDIGO QR REAL -->
+    <div id="modal-qr" class="modal-overlay">
+        <div class="modal-content overflow-hidden">
+            <div class="bg-red-700 text-white p-4 font-bold text-xs uppercase tracking-wider flex justify-between items-center">
+                <span><i class="fas fa-qrcode mr-2"></i>Compartir Perfil</span>
+                <button class="close-modal text-lg font-bold px-2 text-white/80 hover:text-white">&times;</button>
+            </div>
+            <div class="p-5 text-center">
+                <div id="qrcode" class="flex justify-center p-2.5 bg-white border border-slate-200 rounded-xl inline-block mx-auto shadow-sm"></div>
+                <p class="text-[10px] text-slate-500 mt-3 px-1 leading-normal">Escanea este código desde otro celular para abrir al instante la Tarjeta Digital Profesional de Fumigación Monterrey.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Desvanecimiento controlado del Splash Screen
+            setTimeout(() => {
+                const splash = document.getElementById('splash');
+                if(splash) {
+                    splash.style.opacity = '0';
+                    setTimeout(() => splash.style.display = 'none', 400);
+                }
+            }, 1000);
+
+            // Controlador de Modales
+            const setupAppModal = (triggerId, modalId) => {
+                const trigger = document.getElementById(triggerId);
+                const modal = document.getElementById(modalId);
+                if (!trigger || !modal) return;
+                
+                trigger.addEventListener('click', (e) => { e.preventDefault(); modal.classList.add('active'); });
+                modal.querySelector('.close-modal').addEventListener('click', () => modal.classList.remove('active'));
+                modal.addEventListener('click', (e) => { if(e.target === modal) modal.classList.remove('active'); });
+            };
+
+            // URL Asignada al repositorio del proyecto del cliente
+            const urlRealProduccion = window.location.href;
+
+            // Inicializar disparadores táctiles de la barra de navegación inferior
+            setupAppModal('nav-services', 'modal-services');
+            setupAppModal('nav-gallery', 'modal-gallery');
+            setupAppModal('nav-testimonials', 'modal-testimonials');
+            setupAppModal('nav-coverage', 'modal-coverage');
+            setupAppModal('nav-qr', 'modal-qr');
+
+            // Generador de QR dinámico
+            const qrBox = document.getElementById("qrcode");
+            if(qrBox) {
+                new QRCode(qrBox, {
+                    text: urlRealProduccion,
+                    width: 144,
+                    height: 144,
+                    colorDark : "#b91c1c",
+                    colorLight : "#ffffff",
+                    correctLevel : QRCode.CorrectLevel.H
+                });
+            }
+
+            // Descarga de tarjeta vCard corporativa
+            const btnVcard = document.getElementById('btn-vcard');
+            if (btnVcard) {
+                btnVcard.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const vCardData = `BEGIN:VCARD\nVERSION:3.0\nFN:Fumigaciones Monterrey INC\nORG:Fumigaciones Monterrey INC\nTEL;TYPE=CELL,VOICE;PREF=1:+573147936494\nADR;TYPE=WORK:;;Calle 5 N- 5 -40 Barrio Centro;Riohacha;;;Colombia\nNOTE:NIT 700225285-8. Soluciones y servicios CIP. Abierto 24 horas.\nURL:${urlRealProduccion}\nEND:VCARD`;
+                    const blob = new Blob([vCardData], { type: 'text/vcard;charset=utf-8' });
+                    const url = URL.createObjectURL(blob);
+                    const link = document.createElement('a');
+                    link.href = url;
+                    link.download = 'Fumigaciones_Monterrey.vcf';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                    URL.revokeObjectURL(url);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

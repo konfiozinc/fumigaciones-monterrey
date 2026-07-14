@@ -59,18 +59,18 @@
         <!-- CUERPO DE LA APP -->
         <div class="flex-grow flex flex-col justify-between pb-24 overflow-y-auto">
             
-            <!-- 2. PORTADA & HERO CORREGIDA (Ubicación de Seguridad Central Protegida contra Desbordes) -->
+            <!-- 2. PORTADA & HERO CORREGIDA -->
             <header class="relative bg-gradient-to-b from-red-750 via-red-900 to-slate-900 pt-6 pb-6 px-5 text-center text-white rounded-b-[40px] shadow-2xl flex-shrink-0 border-b border-red-600/20">
                 <div class="absolute top-3 right-4 bg-emerald-600 text-white font-black px-2.5 py-0.5 rounded-full text-[8px] uppercase tracking-wider shadow-md">
                     Abierto 24h
                 </div>
                 
-                <!-- Título Superior Directo -->
-                <h2 class="text-3xl font-black text-white mt-2 tracking-tight bg-gradient-to-r from-white via-slate-100 to-slate-300 bg-clip-text text-transparent fade-in-up" style="animation-delay: 300ms;">Fumigación Monterrey</h2>
-                <p class="text-red-400 font-bold text-[10px] uppercase tracking-widest mt-0.5 fade-in-up" style="animation-delay: 400ms;">Fumigaciones Monterrey INC.</p>
+                <!-- Título Superior -->
+                <h2 class="text-3xl font-black text-white mt-2 tracking-tight bg-gradient-to-r from-white via-slate-100 to-slate-300 bg-clip-text text-transparent fade-in-up">Fumigación Monterrey</h2>
+                <p class="text-red-400 font-bold text-[10px] uppercase tracking-widest mt-0.5 hash-label fade-in-up">Fumigaciones Monterrey INC.</p>
                 
-                <!-- Logotipo Ubicado en el Centro Real de la Cabecera (Totalmente Visible) -->
-                <div class="w-20 h-20 mx-auto bg-white rounded-full flex flex-col items-center justify-center border-4 wow-profile p-2 fade-in-up my-3 shadow-lg shadow-red-600/10" style="animation-delay: 500ms;">
+                <!-- LOGO CON FORCE-RENDER (Removida opacidad cero para visualización inmediata) -->
+                <div class="w-20 h-20 mx-auto bg-white rounded-full flex flex-col items-center justify-center border-4 wow-profile p-2 my-3 shadow-lg shadow-red-600/10 block">
                     <svg class="w-10 h-10 text-red-600" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 2a5 5 0 0 0-5 5v3H5a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h1v4a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-4h1a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-2V7a5 5 0 0 0-5-5zm3 8H9V7a3 3 0 0 1 6 0v3z"/>
                     </svg>
@@ -78,7 +78,7 @@
                 </div>
                 
                 <!-- Bloque de Información de Identificación -->
-                <div class="bg-slate-950/70 rounded-xl p-2 border border-red-500/20 backdrop-blur-md max-w-[200px] mx-auto shadow-inner fade-in-up" style="animation-delay: 600ms;">
+                <div class="bg-slate-950/70 rounded-xl p-2 border border-red-500/20 backdrop-blur-md max-w-[200px] mx-auto shadow-inner fade-in-up">
                     <p class="text-[8px] uppercase text-slate-400 tracking-widest font-bold">Identificación Oficial</p>
                     <p class="text-xs font-bold text-white mt-0.5">NIT 700225285-8</p>
                 </div>
@@ -88,14 +88,14 @@
             <div class="px-5 space-y-3.5 flex-grow flex flex-col justify-center mt-2">
                 
                 <!-- 3. BOTÓN PRINCIPAL CON COLOR OFICIAL DE WHATSAPP (#25D366) -->
-                <div class="fade-in-up" style="animation-delay: 700ms;">
+                <div class="fade-in-up">
                     <a href="https://wa.me/573147936494?text=Hola%20Fumigaciones%20Monterrey,%20solicito%20información%20sobre%20un%20servicio%20de%20fumigación" target="_blank" class="w-full flex items-center justify-center bg-[#25D366] text-white font-black py-3.5 px-4 rounded-xl text-center text-xs uppercase tracking-wider transition-transform transform active:scale-95 shadow-lg shadow-green-500/20 pulse-whatsapp">
                         <i class="fab fa-whatsapp text-xl mr-2 text-white"></i>¡SOLICITAR SERVICIO YA!
                     </a>
                 </div>
 
                 <!-- SECTORES COMERCIALES EN CRISTAL (Glassmorphism) -->
-                <div class="grid grid-cols-2 gap-2 fade-in-up" style="animation-delay: 800ms;">
+                <div class="grid grid-cols-2 gap-2 fade-in-up">
                     <div class="bg-slate-800/40 border border-slate-700/30 p-2.5 rounded-xl flex items-center gap-2 shadow-md">
                         <div class="w-6 h-6 bg-red-500/10 rounded-lg flex items-center justify-center text-red-400 text-xs flex-shrink-0 shadow-inner"><i class="fas fa-industry"></i></div>
                         <span class="text-[10px] font-bold text-slate-300 leading-tight">Industria Alimentaria</span>
@@ -115,15 +115,15 @@
                 </div>
 
                 <!-- ENLACE TELEFÓNICO DIRECTO NATIVO -->
-                <div class="fade-in-up" style="animation-delay: 900ms;">
+                <div class="fade-in-up">
                     <a href="tel:+573147936494" class="w-full bg-slate-800/80 border border-slate-700/60 py-2.5 px-2 rounded-xl flex items-center justify-center gap-1.5 text-[10px] font-bold text-slate-300 transition-colors hover:bg-slate-700">
-                        <i class="fas fa-phone text-red-500 animate-pulse"></i> Llamar Línea Directa: 314 7936494
+                        <i class="fas fa-phone text-red-500 animate-pulse"></i>派 Llamar Línea Directa: 314 7936494
                     </a>
                 </div>
             </div>
             
             <!-- ACCIÓN DE GUARDADO VCARD -->
-            <div class="px-5 mt-auto pt-2 fade-in-up" style="animation-delay: 1000ms;">
+            <div class="px-5 mt-auto pt-2 fade-in-up">
                 <button id="btn-vcard" class="w-full bg-red-700 hover:bg-red-600 text-white font-bold py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 text-xs uppercase tracking-wider border border-red-600 shadow-md">
                     <i class="fas fa-user-plus text-white"></i> GUARDAR CONTACTO EN AGENDA
                 </button>

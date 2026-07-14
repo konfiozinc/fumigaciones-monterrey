@@ -59,19 +59,21 @@
         <!-- CUERPO DE LA APP -->
         <div class="flex-grow flex flex-col justify-between pb-24 overflow-y-auto">
             
-            <!-- 2. PORTADA & HERO (Ubicación de Seguridad Central) -->
+            <!-- 2. PORTADA & HERO CORREGIDA (Ubicación de Seguridad Central Protegida contra Desbordes) -->
             <header class="relative bg-gradient-to-b from-red-750 via-red-900 to-slate-900 pt-6 pb-6 px-5 text-center text-white rounded-b-[40px] shadow-2xl flex-shrink-0 border-b border-red-600/20">
                 <div class="absolute top-3 right-4 bg-emerald-600 text-white font-black px-2.5 py-0.5 rounded-full text-[8px] uppercase tracking-wider shadow-md">
                     Abierto 24h
                 </div>
                 
-                <!-- Título Superior -->
-                <h2 class="text-2xl font-black text-white mt-2 tracking-tight bg-gradient-to-r from-white via-slate-100 to-slate-300 bg-clip-text text-transparent fade-in-up" style="animation-delay: 300ms;">Fumigación Monterrey</h2>
+                <!-- Título Superior Directo -->
+                <h2 class="text-3xl font-black text-white mt-2 tracking-tight bg-gradient-to-r from-white via-slate-100 to-slate-300 bg-clip-text text-transparent fade-in-up" style="animation-delay: 300ms;">Fumigación Monterrey</h2>
                 <p class="text-red-400 font-bold text-[10px] uppercase tracking-widest mt-0.5 fade-in-up" style="animation-delay: 400ms;">Fumigaciones Monterrey INC.</p>
                 
-                <!-- Logotipo Restaurado Ubicado en el Centro Real de la Cabecera -->
-                <div class="w-20 h-20 mx-auto bg-white rounded-full flex flex-col items-center justify-center border-4 wow-profile p-1 fade-in-up my-3 shadow-lg shadow-red-600/10" style="animation-delay: 500ms;">
-                    <i class="fas fa-mask-ventilator text-3xl text-red-600"></i>
+                <!-- Logotipo Ubicado en el Centro Real de la Cabecera (Totalmente Visible) -->
+                <div class="w-20 h-20 mx-auto bg-white rounded-full flex flex-col items-center justify-center border-4 wow-profile p-2 fade-in-up my-3 shadow-lg shadow-red-600/10" style="animation-delay: 500ms;">
+                    <svg class="w-10 h-10 text-red-600" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2a5 5 0 0 0-5 5v3H5a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h1v4a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-4h1a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-2V7a5 5 0 0 0-5-5zm3 8H9V7a3 3 0 0 1 6 0v3z"/>
+                    </svg>
                     <span class="font-black text-[7px] text-slate-900 tracking-tighter mt-0.5">MONTERREY INC.</span>
                 </div>
                 
@@ -83,11 +85,11 @@
             </header>
 
             <!-- CONTENIDO CENTRAL DE CONVERSIÓN -->
-            <div class="px-5 space-y-3 flex-grow flex flex-col justify-center mt-2">
+            <div class="px-5 space-y-3.5 flex-grow flex flex-col justify-center mt-2">
                 
-                <!-- 3. BOTÓN PRINCIPAL ACTUALIZADO CON COLOR OFICIAL DE WHATSAPP (#25D366) -->
+                <!-- 3. BOTÓN PRINCIPAL CON COLOR OFICIAL DE WHATSAPP (#25D366) -->
                 <div class="fade-in-up" style="animation-delay: 700ms;">
-                    <a href="https://wa.me/573147936494?text=Hola%20Fumigaciones%20Monterrey,%20solicito información%20sobre%20un%20servicio%20de%20fumigación" target="_blank" class="w-full flex items-center justify-center bg-[#25D366] text-white font-black py-3.5 px-4 rounded-xl text-center text-xs uppercase tracking-wider transition-transform transform active:scale-95 shadow-lg shadow-green-500/20 pulse-whatsapp">
+                    <a href="https://wa.me/573147936494?text=Hola%20Fumigaciones%20Monterrey,%20solicito%20información%20sobre%20un%20servicio%20de%20fumigación" target="_blank" class="w-full flex items-center justify-center bg-[#25D366] text-white font-black py-3.5 px-4 rounded-xl text-center text-xs uppercase tracking-wider transition-transform transform active:scale-95 shadow-lg shadow-green-500/20 pulse-whatsapp">
                         <i class="fab fa-whatsapp text-xl mr-2 text-white"></i>¡SOLICITAR SERVICIO YA!
                     </a>
                 </div>
@@ -114,7 +116,7 @@
 
                 <!-- ENLACE TELEFÓNICO DIRECTO NATIVO -->
                 <div class="fade-in-up" style="animation-delay: 900ms;">
-                    <a href="tel:+573147936494" class="w-full bg-slate-800/80 border border-slate-700/60 py-3 px-3 rounded-xl flex items-center justify-center gap-2 text-xs font-bold text-slate-300 transition-colors hover:bg-slate-700">
+                    <a href="tel:+573147936494" class="w-full bg-slate-800/80 border border-slate-700/60 py-2.5 px-2 rounded-xl flex items-center justify-center gap-1.5 text-[10px] font-bold text-slate-300 transition-colors hover:bg-slate-700">
                         <i class="fas fa-phone text-red-500 animate-pulse"></i> Llamar Línea Directa: 314 7936494
                     </a>
                 </div>
@@ -153,7 +155,7 @@
         </nav>
     </div>
 
-    <!-- ================= MODALES INTERACTIVOS (ARQUITECTURA FIJA) ================= -->
+    <!-- ================= MODALES INTERACTIVOS ================= -->
 
     <!-- MODAL DE SERVICIOS -->
     <div id="modal-services" class="modal-overlay">
@@ -171,7 +173,7 @@
         </div>
     </div>
 
-    <!-- MODAL DE SECTORES / EVIDENCIA -->
+    <!-- MODAL DE SECTORES -->
     <div id="modal-gallery" class="modal-overlay">
         <div class="modal-content overflow-hidden">
             <div class="bg-red-700 text-white p-4 font-bold text-xs uppercase tracking-wider flex justify-between items-center">
@@ -190,7 +192,7 @@
         </div>
     </div>
 
-    <!-- MODAL DE TESTIMONIOS / GARANTÍA -->
+    <!-- MODAL DE GARANTÍA -->
     <div id="modal-testimonials" class="modal-overlay">
         <div class="modal-content overflow-hidden">
             <div class="bg-red-700 text-white p-4 font-bold text-xs uppercase tracking-wider flex justify-between items-center">
@@ -229,7 +231,7 @@
         </div>
     </div>
 
-    <!-- MODAL DE CÓDIGO QR REAL -->
+    <!-- MODAL DE CÓDIGO QR -->
     <div id="modal-qr" class="modal-overlay">
         <div class="modal-content overflow-hidden">
             <div class="bg-red-700 text-white p-4 font-bold text-xs uppercase tracking-wider flex justify-between items-center">
@@ -245,7 +247,7 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Desvanecimiento controlado del Splash Screen
+            // Desvanecimiento del Splash Screen
             setTimeout(() => {
                 const splash = document.getElementById('splash');
                 if(splash) {
@@ -265,7 +267,6 @@
                 modal.addEventListener('click', (e) => { if(e.target === modal) modal.classList.remove('active'); });
             };
 
-            // URL Asignada al repositorio del proyecto del cliente
             const urlRealProduccion = window.location.href;
 
             // Inicializar disparadores táctiles de la barra de navegación inferior

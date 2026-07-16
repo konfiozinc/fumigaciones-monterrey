@@ -57,7 +57,7 @@
     <div class="app-container w-full max-w-[380px] bg-slate-900 relative flex flex-col justify-between overflow-hidden shadow-2xl">
         
         <!-- CUERPO DE LA APP -->
-        <div class="flex-grow flex flex-col justify-between pb-24 overflow-y-auto">
+        <div class="flex-grow flex flex-col justify-between pb-28 overflow-y-auto">
             
             <!-- 2. PORTADA & HERO CORREGIDA -->
             <header class="relative bg-gradient-to-b from-red-750 via-red-900 to-slate-900 pt-6 pb-6 px-5 text-center text-white rounded-b-[40px] shadow-2xl flex-shrink-0 border-b border-red-600/20">
@@ -70,7 +70,7 @@
                 <p class="text-red-400 font-bold text-[10px] uppercase tracking-widest mt-0.5 hash-label fade-in-up">Fumigaciones Monterrey INC.</p>
                 
                 <!-- LOGO CON FORCE-RENDER (Removida opacidad cero para visualización inmediata) -->
-                <div class="w-20 h-20 mx-auto bg-white rounded-full flex flex-col items-center justify-center border-4 wow-profile p-2 my-3 shadow-lg shadow-red-600/10 block">
+                <div class="w-24 h-24 mx-auto bg-white rounded-full flex flex-col items-center justify-center border-4 wow-profile p-2 my-3 shadow-lg shadow-red-600/10 block">
                     <svg class="w-10 h-10 text-red-600" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 2a5 5 0 0 0-5 5v3H5a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h1v4a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-4h1a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-2V7a5 5 0 0 0-5-5zm3 8H9V7a3 3 0 0 1 6 0v3z"/>
                     </svg>
@@ -117,7 +117,7 @@
                 <!-- ENLACE TELEFÓNICO DIRECTO NATIVO -->
                 <div class="fade-in-up">
                     <a href="tel:+573147936494" class="w-full bg-slate-800/80 border border-slate-700/60 py-2.5 px-2 rounded-xl flex items-center justify-center gap-1.5 text-[10px] font-bold text-slate-300 transition-colors hover:bg-slate-700">
-                        <i class="fas fa-phone text-red-500 animate-pulse"></i>派 Llamar Línea Directa: 314 7936494
+                        <i class="fas fa-phone text-red-500 animate-pulse"></i> Llamar Línea Directa: 314 7936494
                     </a>
                 </div>
             </div>
@@ -130,29 +130,35 @@
             </div>
         </div>
 
-        <!-- 12. BARRA DE NAVEGACIÓN INFERIOR (ESTILO APP FIJA - CONTROL MODAL) -->
-        <nav class="absolute bottom-0 inset-x-0 bg-slate-950 border-t border-slate-800 px-2 py-2.5 flex justify-around items-center z-20 shadow-2xl">
-            <button id="nav-services" class="flex flex-col items-center justify-center text-slate-400 hover:text-red-500 w-12 transition-colors">
-                <i class="fas fa-shield-virus text-base"></i>
-                <span class="text-[9px] font-semibold mt-1">Servicios</span>
-            </button>
-            <button id="nav-gallery" class="flex flex-col items-center justify-center text-slate-400 hover:text-red-500 w-12 transition-colors">
-                <i class="fas fa-clipboard-check text-base"></i>
-                <span class="text-[9px] font-semibold mt-1">Sectores</span>
-            </button>
-            <button id="nav-testimonials" class="flex flex-col items-center justify-center text-slate-400 hover:text-red-500 w-12 transition-colors">
-                <i class="fas fa-square-poll-horizontal text-base"></i>
-                <span class="text-[9px] font-semibold mt-1">Garantía</span>
-            </button>
-            <button id="nav-coverage" class="flex flex-col items-center justify-center text-slate-400 hover:text-red-500 w-12 transition-colors">
-                <i class="fas fa-map-location-dot text-base"></i>
-                <span class="text-[9px] font-semibold mt-1">Ubicación</span>
-            </button>
-            <button id="nav-qr" class="flex flex-col items-center justify-center text-slate-400 hover:text-red-500 w-12 transition-colors">
-                <i class="fas fa-qrcode text-base"></i>
-                <span class="text-[9px] font-semibold mt-1">QR</span>
-            </button>
-        </nav>
+        <!-- 12. BARRA DE NAVEGACIÓN INFERIOR & PIE DE TARJETA ACTUALIZADO -->
+        <div class="absolute bottom-0 inset-x-0 bg-slate-950 border-t border-slate-800 z-20 flex flex-col shadow-2xl">
+            <nav class="px-2 py-2.5 flex justify-around items-center">
+                <button id="nav-services" class="flex flex-col items-center justify-center text-slate-400 hover:text-red-500 w-12 transition-colors">
+                    <i class="fas fa-shield-virus text-base"></i>
+                    <span class="text-[9px] font-semibold mt-1">Servicios</span>
+                </button>
+                <button id="nav-gallery" class="flex flex-col items-center justify-center text-slate-400 hover:text-red-500 w-12 transition-colors">
+                    <i class="fas fa-clipboard-check text-base"></i>
+                    <span class="text-[9px] font-semibold mt-1">Sectores</span>
+                </button>
+                <button id="nav-testimonials" class="flex flex-col items-center justify-center text-slate-400 hover:text-red-500 w-12 transition-colors">
+                    <i class="fas fa-square-poll-horizontal text-base"></i>
+                    <span class="text-[9px] font-semibold mt-1">Garantía</span>
+                </button>
+                <button id="nav-coverage" class="flex flex-col items-center justify-center text-slate-400 hover:text-red-500 w-12 transition-colors">
+                    <i class="fas fa-map-location-dot text-base"></i>
+                    <span class="text-[9px] font-semibold mt-1">Ubicación</span>
+                </button>
+                <button id="nav-qr" class="flex flex-col items-center justify-center text-slate-400 hover:text-red-500 w-12 transition-colors">
+                    <i class="fas fa-qrcode text-base"></i>
+                    <span class="text-[9px] font-semibold mt-1">QR</span>
+                </button>
+            </nav>
+            <!-- SELLO OFICIAL DE MARCA MANDATORIO V2.0 -->
+            <div class="text-center text-[8px] tracking-wider text-slate-600 font-medium bg-slate-950 pb-1.5 uppercase">
+                Creado por KONFÍO ZINC — Todos los derechos reservados
+            </div>
+        </div>
     </div>
 
     <!-- ================= MODALES INTERACTIVOS ================= -->

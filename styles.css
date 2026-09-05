@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+        
+        * { font-family: 'Inter', system-ui, -apple-system, sans-serif; box-sizing: border-box; margin: 0; padding: 0; }
+        body { background-color: #020617; display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 10px; }
+        
+        /* Chasis Fijo Móvil (380px max-width) */
+        .card-container {
+            width: 100%;
+            max-width: 380px;
+            height: 100vh;
+            max-height: 750px;
+            background: #0f172a;
+            border-radius: 28px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.9);
+            border: 1px solid #b91c1c;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Header Rojo Monterrey / Oscuro */
+        .card-header {
+            background: linear-gradient(180deg, #991b1b 0%, #0f172a 100%);
+            padding: 24px 16px 20px 16px;
+            text-align: center;
+            border-bottom-left-radius: 32px;
+            border-bottom-right-radius: 32px;
+            position: relative;
+            border-bottom: 1px solid rgba(220, 38, 38, 0.3);
+        }
+
+        .badge-status {
+            position: absolute;
+            top: 12px;
+            right: 14px;
+            background: #16a34a;
+            color: #ffffff;
+            font-size: 8px;
+            font-weight: 900;
+            padding: 3px 10px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+        }
+
+        .avatar-circle {
+            width: 80px;
+            height: 80px;
+            background: #ffffff;
+            border-radius: 50%;
+            margin: 10px auto 8px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid #dc2626;
+            box-shadow: 0 0 15px rgba(220, 38, 38, 0.4);
+            position: relative;
+        }
+
+        /* Títulos */
+        .title-main { font-size: 22px; font-weight: 900; color: #ffffff; letter-spacing: -0.3px; line-height: 1.1; }
+        .title-sub { font-size: 10px; font-weight: 800; color: #fca5a5; text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
+
+        .nit-box {
+            background: rgba(2, 6, 23, 0.7);
+            border: 1px solid rgba(220, 38, 38, 0.3);
+            border-radius: 12px;
+            padding: 6px 12px;
+            margin: 8px auto 0 auto;
+            max-width: 220px;
+        }
+        .nit-text { font-size: 9px; font-weight: 800; color: #ffffff; text-transform: uppercase; letter-spacing: 0.5px; }
+
+        /* Cuerpo de Acciones */
+        .content-body {
+            padding: 12px 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            overflow-y: auto;
+        }
+
+        /* Botón WhatsApp Oficial */
+        .btn-whatsapp {
+            background-color: #25d366;
+            color: white;
+            font-weight: 900;
+            text-transform: uppercase;
+            font-size: 11px;
+            letter-spacing: 0.5px;
+            padding: 12px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            text-decoration: none;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+        }
+
+        /* Grilla Categorías Glassmorphism */
+        .grid-services {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+        .service-card {
+            background: rgba(30, 41, 59, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 8px 10px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .service-icon {
+            width: 24px;
+            height: 24px;
+            background: rgba(220, 38, 38, 0.15);
+            color: #f87171;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .service-text { font-size: 9px; font-weight: 700; color: #cbd5e1; line-height: 1.2; }
+
+        .btn-phone {
+            background: #1e293b;
+            color: #ffffff;
+            border: 1px solid #334155;
+            padding: 10px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            text-decoration: none;
+            font-size: 10px;
+            font-weight: 800;
+        }
+
+        .btn-vcard {
+            background: #b91c1c;
+            color: #ffffff;
+            border: 1px solid #dc2626;
+            padding: 11px;
+            border-radius: 12px;
+            font-weight: 800;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            width: 100%;
+            box-shadow: 0 4px 12px rgba(185, 28, 28, 0.3);
+        }
+
+        /* Barra Inferior */
+        .bottom-nav {
+            background: #020617;
+            display: flex;
+            justify-content: space-around;
+            padding: 8px 4px 6px 4px;
+            border-top: 1px solid #1e293b;
+        }
+        .nav-item {
+            color: #94a3b8;
+            background: none;
+            border: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 8px;
+            font-weight: 600;
+            gap: 3px;
+            cursor: pointer;
+        }
+
+        /* Pie de Marca Blindado Konfío Zinc */
+        .brand-footer {
+            background: #020617;
+            color: #94a3b8;
+            font-size: 9px;
+            text-align: center;
+            padding: 8px 4px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-transform: uppercase;
+        }
+
+        /* Modales */
+        .modal-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(2, 6, 23, 0.88);
+            backdrop-filter: blur(4px);
+            z-index: 50;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+        }
+        .modal-overlay.active { display: flex; }
+        .modal-box {
+            background: #0f172a;
+            border: 1px solid #b91c1c;
+            border-radius: 20px;
+            width: 100%;
+            max-height: 80vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            color: white;
+        }
+        .modal-header {
+            background: #b91c1c;
+            color: #ffffff;
+            padding: 12px 16px;
+            font-weight: 800;
+            font-size: 11px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-transform: uppercase;
+        }
+        .modal-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 16px;
+            font-weight: 800;
+            cursor: pointer;
+        }
+
+        .toast {
+            position: absolute;
+            bottom: 70px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #1e293b;
+            color: #ffffff;
+            border: 1px solid #dc2626;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 10px;
+            font-weight: 700;
+            display: none;
+            z-index: 60;
+        }
+html,body{overflow-x:hidden}img,svg,video{max-width:100%;height:auto}table{max-width:100%}
